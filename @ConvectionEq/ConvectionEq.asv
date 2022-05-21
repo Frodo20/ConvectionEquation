@@ -1,0 +1,22 @@
+% ConvectionEq.m
+% 关键词classdef，后跟一个自定义类名，存放属性和方法，以end结束
+classdef ConvectionEq
+    %    对流方程(ConvectionEq)类
+ 
+    % 关键词properties：用来存放类的属性（成员变量），以end结束
+    properties
+        alpha
+        up_x
+        up_t
+        down_x
+        down_t
+    end
+ 
+    % 关键词methods：用来存放类的方法（成员函数），以end结束
+    methods
+        % 关键词function：这个见过很多遍了，就是用来定义函数的，写法和直接定义函数一样，以end结束
+        % 下为构造函数，名称和类名称相同，返回值必须是stressTensor类，因此在书写时可以直接写"item.tensorMat"，即访问其作为stressTensor类具有的成员变量
+        function item = ConvectionEq(alpha_1,up_x_1,up_t_1,down_x_1,down_t_1)
+            if(~exist('a_1','var'))
+               a_1 = 2;  % 如果未出现该变量，则对其进行赋值
+            end
